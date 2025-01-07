@@ -8,6 +8,7 @@ const[login,setLogin]=useState(false)
         name: "",
         email: "",
         password: "",
+        role: "",
       });
      
       const navigate = useNavigate();
@@ -18,13 +19,14 @@ const[login,setLogin]=useState(false)
     
       const handleSubmit = (e) => {
         e.preventDefault();
-        if (!formData.name || !formData.email || !formData.password) {
+        if (!formData.name || !formData.email || !formData.password ) {
           alert("Please fill out all fields.");
           return;
         }
         console.log("Signup successful:", formData);
         setLogin(true)
         console.log("signup login:",login)
+        console.log("form" ,formData)
         
     // Navigate to Profile page with formData
      navigate('/profile', { state: { formData,login } });
@@ -33,6 +35,7 @@ const[login,setLogin]=useState(false)
           name: "",
           email: "",
           password: "",
+          role:"",
         });
       };
 
@@ -74,6 +77,34 @@ const[login,setLogin]=useState(false)
             placeholder="Enter your password"
           />
         </div>
+{/* for role */}
+        <div className="felx mr-4px">
+          <p>Choose purpose</p>
+          <label htmlFor="radio">
+          <input
+            type="radio"
+            id="trainer"
+            name="role"
+            value="Trainer" // Set specific value for Trainer
+            checked={formData.role === "Trainer"} // Bind to state for controlled input
+            onChange={handleChange}
+            
+          />
+        Trainer</label>
+         <label htmlFor="radio">
+          <input
+            type="radio"
+            id="trainee"
+            name="role"
+            value="Trainee" // Set specific value for Trainee
+            checked={formData.role === "Trainee"} // Bind to state for controlled input
+            onChange={handleChange}
+          />
+      Trainee</label>
+        </div>  
+
+           
+            
         <button type="submit" className="signup-button">Sign Up</button>
       </form>
     </div>
