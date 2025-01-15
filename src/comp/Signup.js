@@ -25,12 +25,10 @@ const[login,setLogin]=useState(false)
         }
         console.log("Signup successful:", formData);
         setLogin(true)
-        console.log("signup login:",login)
-        console.log("form" ,formData)
-        
-    // Navigate to Profile page with formData
-     navigate('/profile', { state: { formData,login } });
-     
+       
+        localStorage.setItem('formData', JSON.stringify(formData)); // Save formData to local storage
+        localStorage.setItem('login', true); // Save login state to local storage
+        navigate('/profile');
         setFormData({
           name: "",
           email: "",

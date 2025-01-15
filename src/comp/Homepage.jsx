@@ -1,18 +1,29 @@
-import React from 'react';
-import Hero from './Hero';
-import Howitworks from './Howitworks';
-import Featuredskills from './Featuredskills';
-import Testimonials from './Testimonials';
-import Footer from './Footer';
-const Homepage = () => {
+import React, { useState } from 'react';
+
+import Homepage1 from './Homepage1';
+import Homepage2 from './Homepage2';
+import { useEffect } from 'react';
+const Homepage = ({}) => {
+  
+  const [login, setLogin] = useState(false);
+    useEffect(() => {
+        // Retrieve data from local storage
+       
+        const storedLogin = localStorage.getItem('login') === 'true';
+        if ( storedLogin) {
+          
+            setLogin(storedLogin);
+        }
+    }, []);
+
   return (
-    <>
-    <Hero />
-            <Howitworks />
-            <Featuredskills />
-            <Testimonials />
-            <Footer />
-    </>
+   <>
+   {/* afterlogin */}
+   {!login ? <Homepage1/> : <Homepage2/>}
+   </>
+
+    
+  
   )
 }
 
