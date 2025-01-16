@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Homepage1 from './Homepage1';
 import Homepage2 from './Homepage2';
 import { useEffect } from 'react';
+import Poster from './Poster';
 const Homepage = ({}) => {
   
   const [login, setLogin] = useState(false);
@@ -18,6 +19,7 @@ const Homepage = ({}) => {
 
   return (
    <>
+   
    {/* afterlogin */}
    {!login ? <Homepage1/> : <Homepage2/>}
    </>

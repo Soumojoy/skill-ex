@@ -9,7 +9,7 @@ const Hero = () => {
   return (
    <>
     {!location.state?
- <section className="hero">
+ <section id='hero-1' >
  <div className="hero-content">
    <h1>Unlock Your Potential with SkillExchange</h1>
    <p>Connect with people to learn, grow, and share valuable skills.</p>

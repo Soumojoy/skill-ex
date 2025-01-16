@@ -36,7 +36,9 @@
 /* Hero css */
 /* Hero.css */
 .hero {
-  background-image: url('https://th.bing.com/th/id/OIP.HXBxmGW_aKr5N0HnWmKSVgAAAA?w=460&h=276&rs=1&pid=ImgDetMain'); /* Replace with an actual image URL */
+  /* Replace with an actual image URL */
+   background-image: url('banner.jpg');
+   opacity: 80;
   background-size: cover;
   background-position: center;
   height: 80vh;
@@ -47,6 +49,21 @@
   text-align: center;
   padding: 2rem;
 }
+#hero-1 {
+  /* Replace with an actual image URL */
+   background-image: url('banner.jpg');
+   opacity: 80;
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  text-align: center;
+  padding: 2rem;
+}
+
 
 .hero-content {
   max-width: 600px;
@@ -339,4 +356,3 @@
   color: #555;
   margin: 10px 0;
 }
-

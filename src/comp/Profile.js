@@ -44,7 +44,7 @@ const handleLogout=()=>{
     </div>
     :
     <div className=''>
- <h1>{formData.name}</h1>
+ <h1>Welcome to SkillExchange {formData.name}</h1>
  {
   home ? <div>
 
